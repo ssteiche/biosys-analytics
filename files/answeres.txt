@@ -1,0 +1,63 @@
+$ mkdir files
+$ wget https://www.constitution.org/usdeclar.txt
+--2019-01-16 13:52:03--  https://www.constitution.org/usdeclar.txt
+Resolving www.constitution.org... 52.52.207.176, 52.52.214.82, 52.52.40.206, ...
+Connecting to www.constitution.org|52.52.207.176|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/plain]
+Saving to: “usdeclar.txt”
+
+    [ <=>                                                          ] 8,685       --.-K/s   in 0s
+
+2019-01-16 13:52:04 (108 MB/s) - “usdeclar.txt” saved [8685]
+$ wget https://www.usconstitution.net/const.txt
+--2019-01-16 13:52:23--  https://www.usconstitution.net/const.txt
+Resolving www.usconstitution.net... 52.52.207.176
+Connecting to www.usconstitution.net|52.52.207.176|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/plain]
+Saving to: “const.txt”
+
+    [ <=>                                                          ] 45,119      --.-K/s   in 0.04s
+
+2019-01-16 13:52:23 (1.06 MB/s) - “const.txt” saved [45119]
+$ wget -O scarlet.txt https://www.gutenberg.org/files/25344/25344-0.txt
+--2019-01-16 13:55:21--  https://www.gutenberg.org/files/25344/25344-0.txt
+Resolving www.gutenberg.org... 152.19.134.47, 2610:28:3090:3000:0:bad:cafe:47
+Connecting to www.gutenberg.org|152.19.134.47|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 525464 (513K) [text/plain]
+Saving to: “scarlet.txt”
+
+100%[=============================================================>] 525,464     1.44M/s   in 0.3s
+
+2019-01-16 13:55:22 (1.44 MB/s) - “scarlet.txt” saved [525464/525464]
+$ ls -l
+total 584
+-rw-r--r-- 1 ssteiche bh_class  45119 Jan 10 12:23 const.txt
+-rw-r--r-- 1 ssteiche bh_class 525464 Jan 23  2015 scarlet.txt
+-rw-r--r-- 1 ssteiche bh_class   8685 Jan  4 14:27 usdeclar.txt
+$ wc -l const.txt usdeclar.txt scarlet.txt
+   872 const.txt
+   176 usdeclar.txt
+  9120 scarlet.txt
+ 10168 total
+$ find -size +50k
+./scarlet.txt
+$ file const.txt
+const.txt: ASCII English text
+$ ls | md5sum
+0d5a04a1a1fc0d4691abcc12f753d61c  -
+$ du -h
+584K    .
+$ grep -ir "judge" . | wc -l
+23
+$ grep -lr "human" .
+./scarlet.txt
+./usdeclar.txt
+$ grep -o "scarlet" scarlet.txt | wc -w
+108
+$ head -n15 -q *.txt > foo
+$ wc -l foo
+45 foo
+$ rm foo
