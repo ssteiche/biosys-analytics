@@ -61,3 +61,35 @@ $ head -n15 -q *.txt > foo
 $ wc -l foo
 45 foo
 $ rm foo
+
+## Grad answers below
+
+$ find . -type f -name "[sc]*" -exec cat {} + | wc -w
+94547
+$ wc -w `find -name '[sc]*'`
+ 86895 ./scarlet.txt
+  7652 ./const.txt
+ 94547 total
+$ grep -r "^Article [0-9]"
+const.txt:Article 1.
+const.txt:Article 2.
+const.txt:Article 3.
+const.txt:Article 4.
+const.txt:Article 5.
+const.txt:Article 6.
+const.txt:Article 7.
+$ grep -cvr '[^[:space:]]' const.txt
+169
+$ grep -c '^[AEIOUaeiou]' scarlet.txt
+1801
+$ grep -o '^[AEIOUaeiou]' scarlet.txt | LC_COLLATE=C sort | uniq -c
+     59 A
+     10 E
+     88 I
+     20 O
+      6 U
+    633 a
+    199 e
+    348 i
+    358 o
+     80 u

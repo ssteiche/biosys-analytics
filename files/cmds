@@ -680,3 +680,137 @@
   680  rm foo
   681  ls
   682  history > cmds
+  683  ls
+  684  touch answeres.txt
+  685  vi answeres.txt 
+  686  wc answeres.txt 
+  687  wc answeres.txt -c
+  688  git --help
+  689  man git
+  690  git add -A files
+  691  cd ..
+  692  git add -A files
+  693  git commit
+  694  git push
+  695  cd files/
+  696  ls
+  697  find . -type f -name "s*"
+  698  find . -type f -name "s*""c*"
+  699  find . -type f -name "s*" "c*"
+  700  find . -type f -name "s*|c*"
+  701  find . -type f -name "s|c*"
+  702  find . -type f -name "(s|c)*"
+  703  find . -type f -name "(s|c)"
+  704  find . -type f -name "^(s|c)"
+  705  find . -type f -name "^c"
+  706  find . -type f -name "c*"
+  707  find . -type f -name "s|c*"
+  708  find . -type f -name "[sc]"
+  709  find . -type f -regex "[sc]"
+  710  find . -regextype -regex "[sc]"
+  711  find . -regextype regex -regex "[sc]"
+  712  find . -regextype sed -regex "[sc]"
+  713  find . -regextype sed -regex "./[sc]"
+  714  find . -regextype sed -regex ".*[sc]"
+  715  find . -regextype sed -regex ".*/[sc]"
+  716  find . -regextype sed -regex "./[sc]"
+  717  find . -regextype sed -regex ".*[sc]"
+  718  ls
+  719  find . -regextype sed -regex "./[sc]*"
+  720  find . -type f -regextype sed -regex "./[sc]*"
+  721  ls -d [sc]*
+  722  rm cmds
+  723  ls -d [sc]*
+  724  ls -d [sc]* | wc -w
+  725  pwd
+  726  find . -type f -name '[sc]'
+  727  find . -type f -name '[sc]*'
+  728  find . -type f -name '[sc]*' | wc -w
+  729  wc `find -name '[sc]*'`
+  730  wc -w `find -name '[sc]*'`
+  731  find . -type f -name "[sc]*" -exec cat {} + | wc -w
+  732  grep . "^Article "
+  733  more answeres.txt 
+  734  grep -r "^Article "
+  735  grep -r "^Article [0-9]"
+  736  grep -E '[^[:space:]]'
+  737  grep -E '[^[:space:]]' .
+  738  grep -rE '[^[:space:]]' .
+  739  grep -cvrE '[^[:space:]]' .
+  740  grep -cvrE '[^[:space:]]' const.txt 
+  741  grep -cvr '[^[:space:]]' const.txt 
+  742  grep -cr '[^[:space:]]' const.txt 
+  743  grep -cvr '[^[:space:]]' const.txt 
+  744  cd /rsgrps/bh_class/ssteiche/biosys-analytics/
+  745  ls
+  746  cd files/
+  747  ls
+  748  grep '[AEIOUaeiou]' scarlet.txt 
+  749  man grep
+  750  grep -c '[AEIOUaeiou]' scarlet.txt 
+  751  wc scarlet.txt -l
+  752  grep -c '^[AEIOUaeiou]' scarlet.txt 
+  753  grep '^[AEIOUaeiou]' scarlet.txt 
+  754  grep -c '^[AEIOUaeiou]' scarlet.txt 
+  755  cd /rsgrps/bh_class/ssteiche/biosys-analytics/
+  756  ls
+  757  cd files/
+  758  ls
+  759  grep '^A' scarlet.txt | wc -l
+  760  grep '^[AEIOUaeiou]' scarlet.txt | wc -l
+  761  grep -o '^[AEIOUaeiou]' scarlet.txt
+  762  grep -oc '^[AEIOUaeiou]' scarlet.txt
+  763  grep -o '^[AEIOUaeiou]' scarlet.txt | wc -l
+  764  awk --help
+  765  awk '^A {print}' scarlet.txt 
+  766  awk '/^A/ {print}' scarlet.txt 
+  767  awk '/^A/ {print}' scarlet.txt | wc -l
+  768  awk '/^[AE]/ {print}' scarlet.txt | wc -l
+  769  grep -n '^[AEIOUaeiou]' scarlet.txt
+  770  egrep '^[A|E]' scarlet.txt
+  771  egrep '^[A]|^E' scarlet.txt
+  772  egrep '^A|^E' scarlet.txt | wc -l
+  773  grep -n '^[AEIOUaeiou]' scarlet.txt
+  774  grep '^[AEIOUaeiou]' scarlet.txt | uniq -c
+  775  uniq --help
+  776  cut --help
+  777  grep '^[AEIOUaeiou]' scarlet.txt | cut -c AEIUOaeiou
+  778  grep '^[AEIOUaeiou]' scarlet.txt | cut -c 'AEIUOaeiou'
+  779  grep '^[AEIOUaeiou]' scarlet.txt | cut -c A
+  780  grep '^[AEIOUaeiou]' scarlet.txt
+  781  uniq --help
+  782  grep -on '^[AEIOUaeiou]' scarlet.txt
+  783  grep -o '^[AEIOUaeiou]' scarlet.txt
+  784  grep -o '^[AEIOUaeiou]' scarlet.txt \ uniq -c
+  785  grep -o '^[AEIOUaeiou]' scarlet.txt | uniq -c
+  786  grep -on '^[AEIOUaeiou]' scarlet.txt | cut -d : -f 1 | uniq -c
+  787  grep -on '^[AEIOUaeiou]' scarlet.txt | cut -d : -f 1 
+  788  grep -on '^[AEIOUaeiou]' scarlet.txt
+  789  grep '^[AEIOUaeiou]' scarlet.txt
+  790  grep '^[AEIOUaeiou]' scarlet.txt | wc -l
+  791  grep -o '^[AEIOUaeiou]' scarlet.txt | wc -l
+  792  grep -o '^[AEIOUaeiou]' scarlet.txt | wc
+  793  grep -o '^[AEIOUaeiou]' scarlet.txt
+  794  grep -o '^[AEIOUaeiou]' scarlet.txt | uniq -c
+  795  grep -o '^[AEIOUaeiou]' scarlet.txt | uniq
+  796  uniq --help
+  797  grep -o '^[AEIOUaeiou]' scarlet.txt | uniq -cd
+  798  grep -o '^[AEIOUaeiou]' scarlet.txt | uniq -cD
+  799  uniq --help
+  800  grep -o '^[AEIOUaeiou]' scarlet.txt | uniq -cu
+  801  grep -o '^[AEIOUaeiou]' scarlet.txt
+  802  grep -o '^[AEIOUaeiou]' scarlet.txt | cat
+  803  grep -o '^[AEIOUaeiou]' scarlet.txt | cat | uniq
+  804  grep -o '^[AEIOUaeiou]' scarlet.txt | cat | uniq -c
+  805  grep -o '^[AEIOUaeiou]' scarlet.txt | uniq -c
+  806  grep -o '^[AEIOUaeiou]' scarlet.txt
+  807  grep -o '^[AEIOUaeiou]' scarlet.txt | sort 
+  808  grep -o '^[AEIOUaeiou]' scarlet.txt | sort | uniq -c
+  809  sort --help
+  810  grep -o '^[AEIOUaeiou]' scarlet.txt | LC_COLLATE=C sort | uniq -c
+  811  ls
+  812  mv answeres.txt answers.txt 
+  813  ls
+  814  vim answers.txt 
+  815  vi answers.txt 
+  816  history > cmds
