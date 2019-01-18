@@ -1,0 +1,816 @@
+    1  ls
+    2  pwd
+    3  mkdir vvgenomes
+    4  cd vvgenomes
+    5  pwd
+    6  date
+    7  cal
+    8  uptime
+    9  whoami
+   10  finger ssteiche
+   11  cat /proc/cpuinfo
+   12  cat /proc/meminfo
+   13  module avail
+   14  module list
+   15  module avail
+   16  va
+   17  module load bowtie2
+   18  module list
+   19  pwd
+   20  cdvvgenomes
+   21  cd vvgenomes
+   22  ls
+   23  pwd
+   24  ls vvgenomes
+   25  ls /
+   26  module list
+   27  module load bowtie2
+   28  pwd
+   29  ls /home/u4/ssteiche/vvgenomes
+   30  cd ssteiche
+   31  cd /home/u4/ssteiche
+   32  ls
+   33  cd /genome
+   34  ls
+   35  cd /home
+   36  ls
+   37  cd /home/u4
+   38  ls
+   39  cd /ssteiche
+   40  cd /home/u4/ssteiche
+   41  ls
+   42  module list
+   43  ls
+   44  cd vvgenomes
+   45  ls
+   46  pwd
+   47  ls
+   48  cd vvgenomes/
+   49  pwd
+   50  scp E:\Bioinformatics\Vampiro\Hugen_transcripts.fna ssteiche@sftp.hpc.arizona.edu:/home/u4/ssteiche/vvgenomes
+   51  scp E:/Bioinformatics/Vampiro/Hugen_transcripts.fna ssteiche@sftp.hpc.arizona.edu:/home/u4/ssteiche/vvgenomes
+   52  sftp ssteiche@sftp.hpc.arizona.edu
+   53  quit() sftp ssteiche@sftp.hpc.arizona.edu
+   54  scp
+   55  quit
+   56  help
+   57  exit
+   58  qsub -I -N bowtie2test -m bea -M ssteiche@email.arizona.edu -W group_list=jkbrown -q standard -l select=1:ncpus=1:mem=2gb -l cput=8:0:0 -l walltime=1:0:0
+   59  quit()
+   60  ls
+   61  cd vvgenomes
+   62  ls
+   63  qsub -I -N bowtie2test -m bea -M ssteiche@email.arizona.edu -W group_list=jkbrown -q standard -l select=1:ncpus=1:mem=2gb -l cput=6:0:0 -l walltime=2:0:0
+   64  pwd
+   65  lpwd
+   66  cd z:/
+   67  quit
+   68  quit() ls
+   69  pwd
+   70  Quit
+   71  quit() cd z:/
+   72  ls
+   73  cd adapt/
+   74  ls
+   75  qsub -I -N bowtie2test -m bea -M ssteiche@email.arizona.edu -W group_list=jkbrown -q standard -l select=1:ncpus=1:mem=2gb -l cput=4:0:0 -l walltime=3:0:0
+   76  qsub -I -N bowtie2test -m bea -M ssteiche@email.arizona.edu -W group_list=jkbrown -q standard -l select=1:ncpus=6:mem=10gb -l cput=4:0:0 -l walltime=3:0:0
+   77  ls
+   78  cd Trinity_out/
+   79  ls
+   80  cd adapt/
+   81  qsub -I -N bowtie2test -m bea -M ssteiche@email.arizona.edu -W group_list=jkbrown -q standard -l select=1:ncpus=6:mem=10gb -l cput=7:0:0 -l walltime=6:0:0
+   82  qsub -I -N bowtie2test -m bea -M ssteiche@email.arizona.edu -W group_list=jkbrown -q standard -l select=1:ncpus=6:mem=10gb -l cput=8:0:0 -l walltime=7:0:0
+   83  module load trinity
+   84  module list
+   85  ls
+   86  cd adapt/
+   87  Trinity --seqType fq --max_memory 8G --left T0WT1-1_1.fastq --right T0WT1-1_2.fastq --CPU 6 --output /home/u4/ssteiche/adapt/Trin_out
+   88  qsub -I -N bowtie2test -m bea -M ssteiche@email.arizona.edu -W group_list=jkbrown -q standard -l select=1:ncpus=6:mem=10gb -l cput=8:0:0 -l walltime=8:0:0
+   89  0WT1-1_1.fastq
+   90  cp T0WT1-1_2.fastq trin_test/T0WT1-1_2.fastq
+   91  ls
+   92  cd trin_test/
+   93  ls
+   94  len T0WT1-1_2.fastq 
+   95  cd ..
+   96  ls
+   97  rm -rf Trinity_out/
+   98  rm -rf trin_test/
+   99  rm -rf trinity_out_dir/
+  100  Trinity --seqType fq --max_memory 8G --left T0WT1-1_1.fastq --right T0WT1-1_2.fastq --CPU 6
+  101  ls
+  102  rm -rf trinity_out_dir/
+  103  Trinity --seqType fq --max_memory 8G --left T0WT1-1_1.fastq --right T0WT1-1_2.fastq --CPU 6
+  104  ls
+  105  rm -rf trinity_out_dir/
+  106  ls
+  107  va
+  108  ls
+  109  qsub -I -N trinity_test -m bea -M ssteiche@email.arizona.edu -W group_list=jkbrown -q standard -l select=1:ncpus=28:mem=168gb:pcmem=6gb -l cput=3:0:0 -l walltime=3:0:0
+  110  ls
+  111  rm -rf trinity_out_dir/
+  112  ls
+  113  ls -al
+  114  quit
+  115  va
+  116  qsub -I -N trinity_test -m bea -M ssteiche@email.arizona.edu -W group_list=jkbrown -q standard -l select=1:ncpus=28:mem=168gb:pcmem=6gb -l cput=5:0:0 -l walltime=4:0:0
+  117  ory 120G --left T0WT1-1_1.fastq --right T0WT1-1_2.fastq
+  118  rm -rf trinity_out_dir/
+  119  ls
+  120  Trinity --seqType fq --max_memory 120G --left T0WT1-1_1.fastq --right T0WT1-1_2.fastq
+  121  module load trinity
+  122  cd adapt/
+  123  Trinity --seqType fq --max_memory 120G --left T0WT1-1_1.fastq --right T0WT1-1_2.fastq --CPU 28
+  124  :pcmem=6gb -l cput=5:0:0 -l walltime=4:0:0
+  125  va
+  126  ls
+  127  cd /extra
+  128  ls
+  129  cd ssteiche
+  130  ls
+  131  pwd
+  132  mk /adapt_not
+  133  mkdir /adapt_not
+  134  ls
+  135  cd /home/u4
+  136  ls
+  137  cd /par
+  138  cd /ssteiche
+  139  cd /home/u4/ssteiche
+  140  ls
+  141  cd ..
+  142  cd ssteiche/
+  143  cd ..
+  144  cd par/
+  145  cd ssteiche/
+  146  ls
+  147  cd vvgenomes/
+  148  ls -l
+  149  cd ..
+  150  ls -al
+  151  cd adapt/
+  152  ls -al
+  153  ls
+  154  cd /extra/ssteiche
+  155  ls
+  156  wget https://data.broadinstitute.org/Trinity/Trinotate_v2.0_RESOURCES/uniprot_sprot.trinotate_v2.0.pep.gz
+  157  wget https://data.broadinstitute.org/Trinity/Trinotate_v2.0_RESOURCES/Pfam-A.hmm.gz
+  158  ls lh
+  159  ls -lh
+  160  mv uniprot_sprot.trinotate_v2.0.pep.gz uniprot_sprot.trinotate.pep.gz
+  161  ls
+  162  gunzip uniprot_sprot.trinotate.pep.gz
+  163  ls
+  164  module load blast
+  165  module list
+  166  makeblastdb -in uniprot_sprot.trinotate.pep -dbtype prot
+  167  gunzip Pfam-A.hmm.gz
+  168  module load hmmer
+  169  module list
+  170  hmmpress Pfam-A.hmm
+  171  wget "https://data.broadinstitute.org/Trinity/Trinotate_v2.0_RESOURCES/Trinotate.sprot_uniref90.20150131.boilerplate.sqlite.gz" -O Trinotate.sqlite.gz
+  172  gunzip Trinotate.sqlite.gz
+  173  history 10
+  174  module list
+  175  history 10
+  176  pwd
+  177  history > /home/u4/ssteiche/BashHist062917.txt
+  178  ls
+  179  cd /home/u4/ssteiche
+  180  ls
+  181  nano BashHist062917.txt 
+  182  cd /extra/ssteiche
+  183  ls
+  184  mv T0WT3-1_2.fastq T0WT3-1_1.fastq 
+  185  ls
+  186  module load fastqc
+  187  module list
+  188  fastqc T0WT3-1_1.fastq 
+  189  ls
+  190  cd /extra/ssteiche
+  191  ls
+  192  qsub -I -N trinity_test -m bea -M ssteiche@email.arizona.edu -W group_list=jkbrown -q standard -l select=1:ncpus=28:mem=168gb:pcmem=6gb -l cput=5:0:0 -l walltime=4:0:0
+  193  qsub -I -N trinity_test -m bea -M ssteiche@email.arizona.edu -W group_list=jkbrown -q standard -l select=1:ncpus=28:mem=168gb:pcmem=6gb -l cput=8:0:0 -l walltime=8:0:0
+  194  va
+  195  qsub -I -N trinity_test -m bea -M ssteiche@email.arizona.edu -W group_list=jkbrown -q standard -l select=1:ncpus=28:mem=168gb:pcmem=6gb -l cput=12:0:0 -l walltime=8:0:0
+  196  va
+  197  qsub -I -N trinity_test -m bea -M ssteiche@email.arizona.edu -W group_list=jkbrown -q standard -l select=1:ncpus=28:mem=168gb:pcmem=6gb -l cput=12:0:0 -l walltime=8:0:0
+  198  va
+  199  qsub -I -N trinity_test -m bea -M ssteiche@email.arizona.edu -W group_list=jkbrown -q standard -l select=1:ncpus=28:mem=168gb:pcmem=6gb -l cput=24:0:0 -l walltime=8:0:0
+  200  va
+  201  qsub -I -N trinity_test -m bea -M ssteiche@email.arizona.edu -W group_list=jkbrown -q standard -l select=1:ncpus=28:mem=168gb:pcmem=6gb -l cput=48:0:0 -l walltime=8:0:0
+  202  va
+  203  ls /extra/ssteiche
+  204  va
+  205  ls
+  206  cd adapt/
+  207  ls
+  208  mv T0WT1-1_1.fastq /extra/ssteiche T0WT1-1_1.fastq 
+  209  mv T0WT1-1_1.fastq /extra/ssteiche/T0WT1-1_1.fastq 
+  210  ls
+  211  mv T0WT1-1_2.fastq /extra/ssteiche/T0WT1-1_2.fastq 
+  212  qsub -I -N trinity_test -m bea -M ssteiche@email.arizona.edu -W group_list=jkbrown -q standard -l select=1:ncpus=28:mem=168gb:pcmem=6gb -l cput=24:0:0 -l walltime=8:0:0
+  213  va
+  214   qsub -I -N trinity_test -m bea -M ssteiche@email.arizona.edu -W group_list=jkbrown -q standard -l select=1:ncpus=28:mem=168gb:pcmem=6gb -l cput=48:0:0 -l walltime=8:0:0
+  215  -right T0WT1-1_2.fastq
+  216  va
+  217  ls
+  218  cd /extra/ssteiche/
+  219  ls
+  220  cd trinity_out_T0WT1/
+  221  ls
+  222  va
+  223  ls
+  224  cd /extra/ssteiche/
+  225  ls
+  226  cd trinity_out_T0WT1/
+  227  ls
+  228  head Trinity.fasta 
+  229  cp /extra/ssteiche/trinity_out_T0WT1/Trinity.fasta /extra/ssteiche/Trinity_T0WT1.fasta
+  230  tail Trinity.fasta 
+  231  qsub -I -N transdecoder_test -m bea -M ssteiche@email.arizona.edu -W group_list=jkbrown -q standard -l select=1:ncpus=28:mem=168gb:pcmem=6gb -l cput=8:0:0 -l walltime=6:0:0
+  232  module list
+  233  qsub -I -N transdecoder_test -m bea -M ssteiche@email.arizona.edu -W group_list=jkbrown -q standard -l select=1:ncpus=28:mem=168gb:pcmem=6gb -l cput=8:0:0 -l walltime=6:0:
+  234  va
+  235  qsub -I -N transdecoder_test -m bea -M ssteiche@email.arizona.edu -W group_list=jkbrown -q standard -l select=1:ncpus=28:mem=168gb:pcmem=6gb -l cput=8:0:0 -l walltime=6:0:0
+  236  qsub -I -N transdecoder_test -m bea -M ssteiche@email.arizona.edu -W group_list=jkbrown -q standard -l select=1:ncpus=8:mem=48gb:pcmem=6gb -l cput=8:0:0 -l walltime=6:0:0
+  237   Cd /extra/ssteiche/tri_search
+  238   module load blast
+  239  cd /extra/ssteiche/tri_search
+  240  module list
+  241  blastx -query Trinity_T0WT1.fasta -db /extra/ssteiche/uniprot_sprot.trinotate.pep -num_threads 8 -max_target_seqs 1 -outfmt 6 > blastx.T0WT1.outfmt6
+  242  ls
+  243  cd /extra/ssteiche/
+  244  ls
+  245  mk dir Meta_Run1
+  246  mkdir Meta_Run1
+  247  mv otu_table_mc2_w_tax_no_pynast_failures.biom /Meta_Run1/otu_table_mc2_w_tax_no_pynast_failures.biom 
+  248  mv otu_table_mc2_w_tax_no_pynast_failures.biom /extra/ssteiche/Meta_Run1/otu_table_mc2_w_tax_no_pynast_failures.biom 
+  249  ls
+  250  mv mapping_file_07_12_17_SS.txt /extra/ssteiche/Meta_Run1/mapping_file_07_12_17_SS.txt 
+  251  ls
+  252  cd collectl/
+  253  ls
+  254  ls -a
+  255  cd ..
+  256  ls
+  257  cd Meta_Run1/
+  258  ls
+  259  qsub -I -N Meta_Run1_qiime_test -m bea -M ssteiche@email.arizona.edu -W group_list=jkbrown -q standard -l select=1:ncpus=8:mem=48gb:pcmem=6gb -l cput=8:0:0 -l walltime=6:0:0
+  260  module load qiime
+  261  module list
+  262  module avail 
+  263  module load qiime
+  264  modulelist
+  265  module list
+  266  ls
+  267  /extra
+  268  cd /extra/ssteiche/
+  269  ls
+  270  module load qiime
+  271  module list
+  272  module load blast
+  273  module load blas 
+  274  module list
+  275  module avail 
+  276  ssh hpc.arizona.edu -l ssteiche
+  277  ls
+  278  cd /extra/ssteiche/
+  279  ls
+  280  cd Meta_Run1/
+  281  ls
+  282  module load qiime
+  283  summarize_taxa.py -i otu_table_mc2_w_tax_no_pynast_failures.biom -o ./tax
+  284  qsub -I -N transdecoder_test -m bea -M ssteiche@email.arizona.edu -W group_list=jkbrown -q standard -l select=1:ncpus=8:mem=48gb:pcmem=6gb -l cput=8:0:0 -l walltime=6:0:0
+  285  qsub -I -N QIIME -m bea -M ssteiche@email.arizona.edu -W group_list=jkbrown -q standard -l select=1:ncpus=8:mem=48gb:pcmem=6gb -l cput=8:0:0 -l walltime=6:0:0
+  286  module load fastqc
+  287  module list
+  288  cd /extra/ssteiche/
+  289  ls
+  290  cd Meta_Run1/
+  291  ls
+  292  cd adapt/
+  293  ls
+  294  cd trinity_out_dir/
+  295  ls
+  296  cd .
+  297  ls
+  298  cd ..
+  299  ls
+  300  cd vvgenomes/
+  301  ls
+  302  cd ..
+  303  module
+  304  module avail
+  305  cd /extra/ssteiche
+  306  ls
+  307  cd tri_search/
+  308  ls
+  309  cd /extra/ssteiche/
+  310  ls
+  311  cd tri_search/
+  312  ls
+  313  qsub -I -N transdecoder_test -m bea -M ssteiche@email.arizona.edu -W group_list=jkbrown -q standard -l select=1:ncpus=8:mem=48gb:pcmem=6gb -l cput=8:0:0 -l walltime=6:0:0
+  314  cd /extra/ssteiche/tri_search
+  315  ls
+  316  module load blast
+  317  blastx -query Trinity_T0WT1.fasta -db /extra/ssteiche/uniprot_sprot.trinotate.pep -num_threads 8 -max_target_seqs 1 -outfmt 6 > blastx.T0WT1.outfmt6
+  318  ls
+  319  cd /extra/ssteiche/
+  320  ls
+  321  cd tri_search/
+  322  ls -a
+  323  ls -l
+  324  qsub -I -N LPA_trinity_blast -m bea -M ssteiche@email.arizona.edu -W group_list=jkbrown -q standard -l select=1:ncpus=8:mem=48gb:pcmem=6gb -l cput=18:0:0 -l walltime=8:0:0
+  325  cd /extra/ssteiche/tri_search
+  326  module load blast
+  327  blastx -query Trinity_T0WT1.fasta -db /extra/ssteiche/uniprot_sprot.trinotate.pep -num_threads 8 -max_target_seqs 1 -outfmt 6 > blastx.T0WT1.outfmt6
+  328  ls
+  329  va
+  330  qsub -I -N trinotate_BLASTX_TrinAssem -m bea -M ssteiche@email.arizona.edu -W group_list=jkbrown -q standard -l select=1:ncpus=28:mem=168gb:pcmem=6gb -l cput=48:0:0 -l walltime=8:0:0
+  331  --help
+  332  help
+  333  va
+  334  list
+  335  plugins
+  336  plugin
+  337  va
+  338  module avail
+  339  ls
+  340  cd adapt/
+  341  ls
+  342  cd trinity_out_dir/
+  343  ls
+  344  head Trinity.timing 
+  345  vi Trinity.timing 
+  346  cd ..
+  347  cd ...
+  348  cd ..
+  349  ls
+  350  head BashHist062917.txt 
+  351  cd vvgenomes/
+  352  ls
+  353  cd vvgenomes/
+  354  ls
+  355  cd ..
+  356  lsad
+  357  ls adapt/
+  358  cd adapt/trinity_out_dir/
+  359  ls
+  360  nano Trinity.timing 
+  361  ls
+  362  cd vvgenomes/
+  363  ls
+  364  modules
+  365  module
+  366  exit
+  367  ls
+  368  cd
+  369  ls
+  370  esit
+  371  exit
+  372  ls
+  373  ls -la
+  374  vim .bash_profile 
+  375  ls
+  376  exit
+  377  ls
+  378  cd /rsgrps
+  379  ls
+  380  cd bh_class
+  381  ls
+  382  mkdir ssteiche
+  383  ls
+  384  cd ssteiche/
+  385  git clone git@github.com:ssteiche/biosys-analytics.git
+  386  ls
+  387  cd biosys-analytics/
+  388  ls
+  389  cat README.md 
+  390  ls
+  391  ls -la
+  392  cd .ssh
+  393  ls
+  394  more id_dsa.pub 
+  395  git
+  396  ls
+  397  cd /
+  398  ls
+  399  cd /rsgrps
+  400  ls
+  401  cd bh_class/
+  402  ls
+  403  cd ssteiche/
+  404  ls
+  405  cd biosys-analytics/
+  406  ls
+  407  ls data
+  408  ls data/gapminder/
+  409  exit
+  410  ls
+  411  exit
+  412  ls
+  413  cd /
+  414  ls
+  415  cd rsgrps
+  416  ls
+  417  cd ..
+  418  cd /rsgrps/bh_class/
+  419  ls
+  420  cd ssteiche/
+  421  ls
+  422  cd biosys-analytics/
+  423  ls
+  424  ls lectures/
+  425  cd lectures/
+  426  cd 03-unix-exercises/
+  427  ls
+  428  exit
+  429  ls
+  430  exit
+  431  hostname
+  432  exit
+  433  ls
+  434  cd /rsgrps/bh_class/ssteiche/
+  435  ls
+  436  whoami
+  437  w
+  438  man
+  439  man ls
+  440  ls -l
+  441  ls
+  442  echo hello
+  443  echo Hello, world!
+  444  env
+  445  echo $user
+  446  scho user
+  447  echo $USER
+  448  echo USER
+  449  cowsay hello
+  450  type ssh
+  451  ls /usr
+  452  touch foo
+  453  pwd
+  454  ls
+  455  ls -h
+  456  ls -hl
+  457  rm foo
+  458  ls -hl
+  459  man find
+  460  cd /
+  461  touch foo
+  462  ls
+  463  cd
+  464  cd -
+  465  cd $HOME
+  466  top
+  467  ps -fu $USER 
+  468  w > who
+  469  ls -lh who
+  470  w > who
+  471  cat < who | head
+  472  tree
+  473  SECRET=thingies
+  474  echo $SECRET
+  475  echo $PATH
+  476  ls /rsgrps/bh_class/bin
+  477  PATH=/rsgrps/bh_class/bin:$PATH
+  478  which python
+  479  tree
+  480  q
+  481  quit
+  482  exit
+  483  cd /rsgrps/bh_class/
+  484  cd ssteiche/
+  485  ls
+  486  cd biosys-analytics/
+  487  ls
+  488  less README.md 
+  489  more LICENSE 
+  490  ls
+  491  cd lectures/
+  492  ls
+  493  ls 01-intro/
+  494  ls 02-unix/
+  495  cd 02-unix/
+  496  more unix.md 
+  497  cd ..
+  498  ls
+  499  cd 03-unix-exercises/
+  500  ls
+  501  more unix-exercises.md 
+  502  ls
+  503  git status
+  504  cd ..
+  505  ls
+  506  cd ..
+  507  ls
+  508  git status
+  509  git branch
+  510  mkdir files
+  511  ls
+  512  cd files/
+  513  ls
+  514  wget https://www.constitution.org/usdeclar.txt
+  515  ls
+  516  wget https://www.usconstitution.net/const.txt
+  517  head history
+  518  history
+  519  wget https://www.gutenberg.org/files/25344/25344-0.txt > scarlet.txt
+  520  ls
+  521  wget --help
+  522  ls
+  523  rm 25344-0.txt scarlet.txt 
+  524  ls
+  525  wget https://www.gutenberg.org/files/25344/25344-0.txt -o scarlet.txt
+  526  ls
+  527  cd ..
+  528  git status
+  529  ls
+  530  rm -r files
+  531  ls
+  532  git status
+  533  git pull upstream master
+  534  gi pull
+  535  git pull
+  536  git pull upstream master
+  537  git fetch upstream
+  538  git remote -v
+  539  git remote add upstream https://github/hurwitzlab/biosys-analytics.git
+  540  git remote -v
+  541  git pull upstream master
+  542  grep upstream 01-intro.md
+  543  ls
+  544  cd lectures/
+  545  ls
+  546  cd 01-intro/
+  547  ls
+  548  grep upstream intro.md
+  549  git remote add upstream https://github.com/hurwitzlab/biosys-analytics.git
+  550  git remote -v
+  551  git remote rm origin
+  552  git remote
+  553  git remote -v
+  554  git remote add origin git@github.com:ssteiche/biosys-analytics.git
+  555  git remote -v
+  556  git remote rm upstream
+  557  git remote -v
+  558  git remote add upstream https://github.com/hurwitzlab/biosys-analytics.git
+  559  git remote -v
+  560  exit
+  561  history
+  562  ls
+  563  cd /rsgrps/bh_class/ssteiche/biosys-analytics/
+  564  ls
+  565  git pull upstream master
+  566  ls
+  567  mk dir files
+  568  mkdir files
+  569  cd files/
+  570  wget https://www.constitution.org/usdeclar.txt
+  571  wget https://www.usconstitution.net/const.txt
+  572  wget --help
+  573  wget -O scarlet.txt https://www.gutenberg.org/files/25344/25344-0.txt
+  574  ls
+  575  ls -l
+  576  wc --help
+  577  ls | wc
+  578  wc const.txt 
+  579  ls | wc -l
+  580  wc -l const.txt 
+  581  wc -l const.txt usdeclar.txt scarlet.txt 
+  582  grep --help
+  583  find --help
+  584  find -size 50k
+  585  find -size 5k
+  586  find -size +50k
+  587  which const.txt 
+  588  file const.txt 
+  589  md5sum --help
+  590  ls | md5sum
+  591  ls
+  592  md5sum const.txt 
+  593  md5sum usdeclar.txt 
+  594  md5sum scarlet.txt 
+  595  md5sum scarlet.txt usdeclar.txt const.txt 
+  596  ls | md5sum
+  597  ls | cat | md5sum
+  598  cd /rsgrps/bh_class/ssteiche/biosys-analytics/
+  599  ls
+  600  cd files/
+  601  ls
+  602  df
+  603  df -h
+  604  du
+  605  du -h
+  606  du -hc
+  607  du -hcs
+  608  ls | md5sum
+  609  cd ..
+  610  du
+  611  cd files/
+  612  du
+  613  du -h
+  614  cd /rsgrps/bh_class/ssteiche/biosys-analytics/
+  615  ls
+  616  cat > foo
+  617  more foo
+  618  ls
+  619  cat foo
+  620  echo $PATH
+  621  cd
+  622  ls -a
+  623  ls -l
+  624  ls -lh
+  625  cd /rsgrps/bh_class/ssteiche/biosys-analytics/
+  626  ls
+  627  git pull upstream master
+  628  ls /rsgrps/bh_class/bin
+  629  ls /rsgrps/bh_class/conda/bin
+  630  echo "export PATH=/rsgrps/bh_class/conda/bin:/rsgrps/bh_class/bin:$PATH" >> ~/.bashrc
+  631  grep -ir "judge" . | wc -l
+  632  git commit
+  633  more foo
+  634  rm foo
+  635  git commit
+  636  git push
+  637  git add -A files
+  638  git commit
+  639  git push
+  640  grep --help
+  641  grep -irH "human" . 
+  642  grep -irHq "human" . 
+  643  grep -irhq "human" . 
+  644  grep -irhHq "human" . 
+  645  grep -irh "human" . 
+  646  grep -irhH "human" . 
+  647  find --help
+  648  find . -name 'human'
+  649  find . -regex human
+  650  find . -exec grep human
+  651  man find
+  652  grep -l human . 
+  653  grep -l "human" . 
+  654  grep -lr "human" . 
+  655  cd files/
+  656  ls
+  657  grep -lr "human" . 
+  658  man grep | grep "-l"
+  659  man grep
+  660  wc --help
+  661  man grep
+  662  grep -o "scarlet" scarlet.txt 
+  663  grep -o "scarlet" scarlet.txt | wc -w
+  664  head --help
+  665  head -n 15 .
+  666  cat --help
+  667  head -r .
+  668  head -nr 15 .
+  669  head -r -n 15 .
+  670  head -n15 -q *.txt > foo
+  671  ls
+  672  more foo
+  673  wc foo -l
+  674  wc -l foo
+  675  head -n15 *.txt > foo
+  676  wc -l foo
+  677  more foo
+  678  head -n15 -q *.txt > foo
+  679  wc -l foo 
+  680  rm foo
+  681  ls
+  682  history > cmds
+  683  ls
+  684  touch answeres.txt
+  685  vi answeres.txt 
+  686  wc answeres.txt 
+  687  wc answeres.txt -c
+  688  git --help
+  689  man git
+  690  git add -A files
+  691  cd ..
+  692  git add -A files
+  693  git commit
+  694  git push
+  695  cd files/
+  696  ls
+  697  find . -type f -name "s*"
+  698  find . -type f -name "s*""c*"
+  699  find . -type f -name "s*" "c*"
+  700  find . -type f -name "s*|c*"
+  701  find . -type f -name "s|c*"
+  702  find . -type f -name "(s|c)*"
+  703  find . -type f -name "(s|c)"
+  704  find . -type f -name "^(s|c)"
+  705  find . -type f -name "^c"
+  706  find . -type f -name "c*"
+  707  find . -type f -name "s|c*"
+  708  find . -type f -name "[sc]"
+  709  find . -type f -regex "[sc]"
+  710  find . -regextype -regex "[sc]"
+  711  find . -regextype regex -regex "[sc]"
+  712  find . -regextype sed -regex "[sc]"
+  713  find . -regextype sed -regex "./[sc]"
+  714  find . -regextype sed -regex ".*[sc]"
+  715  find . -regextype sed -regex ".*/[sc]"
+  716  find . -regextype sed -regex "./[sc]"
+  717  find . -regextype sed -regex ".*[sc]"
+  718  ls
+  719  find . -regextype sed -regex "./[sc]*"
+  720  find . -type f -regextype sed -regex "./[sc]*"
+  721  ls -d [sc]*
+  722  rm cmds
+  723  ls -d [sc]*
+  724  ls -d [sc]* | wc -w
+  725  pwd
+  726  find . -type f -name '[sc]'
+  727  find . -type f -name '[sc]*'
+  728  find . -type f -name '[sc]*' | wc -w
+  729  wc `find -name '[sc]*'`
+  730  wc -w `find -name '[sc]*'`
+  731  find . -type f -name "[sc]*" -exec cat {} + | wc -w
+  732  grep . "^Article "
+  733  more answeres.txt 
+  734  grep -r "^Article "
+  735  grep -r "^Article [0-9]"
+  736  grep -E '[^[:space:]]'
+  737  grep -E '[^[:space:]]' .
+  738  grep -rE '[^[:space:]]' .
+  739  grep -cvrE '[^[:space:]]' .
+  740  grep -cvrE '[^[:space:]]' const.txt 
+  741  grep -cvr '[^[:space:]]' const.txt 
+  742  grep -cr '[^[:space:]]' const.txt 
+  743  grep -cvr '[^[:space:]]' const.txt 
+  744  cd /rsgrps/bh_class/ssteiche/biosys-analytics/
+  745  ls
+  746  cd files/
+  747  ls
+  748  grep '[AEIOUaeiou]' scarlet.txt 
+  749  man grep
+  750  grep -c '[AEIOUaeiou]' scarlet.txt 
+  751  wc scarlet.txt -l
+  752  grep -c '^[AEIOUaeiou]' scarlet.txt 
+  753  grep '^[AEIOUaeiou]' scarlet.txt 
+  754  grep -c '^[AEIOUaeiou]' scarlet.txt 
+  755  cd /rsgrps/bh_class/ssteiche/biosys-analytics/
+  756  ls
+  757  cd files/
+  758  ls
+  759  grep '^A' scarlet.txt | wc -l
+  760  grep '^[AEIOUaeiou]' scarlet.txt | wc -l
+  761  grep -o '^[AEIOUaeiou]' scarlet.txt
+  762  grep -oc '^[AEIOUaeiou]' scarlet.txt
+  763  grep -o '^[AEIOUaeiou]' scarlet.txt | wc -l
+  764  awk --help
+  765  awk '^A {print}' scarlet.txt 
+  766  awk '/^A/ {print}' scarlet.txt 
+  767  awk '/^A/ {print}' scarlet.txt | wc -l
+  768  awk '/^[AE]/ {print}' scarlet.txt | wc -l
+  769  grep -n '^[AEIOUaeiou]' scarlet.txt
+  770  egrep '^[A|E]' scarlet.txt
+  771  egrep '^[A]|^E' scarlet.txt
+  772  egrep '^A|^E' scarlet.txt | wc -l
+  773  grep -n '^[AEIOUaeiou]' scarlet.txt
+  774  grep '^[AEIOUaeiou]' scarlet.txt | uniq -c
+  775  uniq --help
+  776  cut --help
+  777  grep '^[AEIOUaeiou]' scarlet.txt | cut -c AEIUOaeiou
+  778  grep '^[AEIOUaeiou]' scarlet.txt | cut -c 'AEIUOaeiou'
+  779  grep '^[AEIOUaeiou]' scarlet.txt | cut -c A
+  780  grep '^[AEIOUaeiou]' scarlet.txt
+  781  uniq --help
+  782  grep -on '^[AEIOUaeiou]' scarlet.txt
+  783  grep -o '^[AEIOUaeiou]' scarlet.txt
+  784  grep -o '^[AEIOUaeiou]' scarlet.txt \ uniq -c
+  785  grep -o '^[AEIOUaeiou]' scarlet.txt | uniq -c
+  786  grep -on '^[AEIOUaeiou]' scarlet.txt | cut -d : -f 1 | uniq -c
+  787  grep -on '^[AEIOUaeiou]' scarlet.txt | cut -d : -f 1 
+  788  grep -on '^[AEIOUaeiou]' scarlet.txt
+  789  grep '^[AEIOUaeiou]' scarlet.txt
+  790  grep '^[AEIOUaeiou]' scarlet.txt | wc -l
+  791  grep -o '^[AEIOUaeiou]' scarlet.txt | wc -l
+  792  grep -o '^[AEIOUaeiou]' scarlet.txt | wc
+  793  grep -o '^[AEIOUaeiou]' scarlet.txt
+  794  grep -o '^[AEIOUaeiou]' scarlet.txt | uniq -c
+  795  grep -o '^[AEIOUaeiou]' scarlet.txt | uniq
+  796  uniq --help
+  797  grep -o '^[AEIOUaeiou]' scarlet.txt | uniq -cd
+  798  grep -o '^[AEIOUaeiou]' scarlet.txt | uniq -cD
+  799  uniq --help
+  800  grep -o '^[AEIOUaeiou]' scarlet.txt | uniq -cu
+  801  grep -o '^[AEIOUaeiou]' scarlet.txt
+  802  grep -o '^[AEIOUaeiou]' scarlet.txt | cat
+  803  grep -o '^[AEIOUaeiou]' scarlet.txt | cat | uniq
+  804  grep -o '^[AEIOUaeiou]' scarlet.txt | cat | uniq -c
+  805  grep -o '^[AEIOUaeiou]' scarlet.txt | uniq -c
+  806  grep -o '^[AEIOUaeiou]' scarlet.txt
+  807  grep -o '^[AEIOUaeiou]' scarlet.txt | sort 
+  808  grep -o '^[AEIOUaeiou]' scarlet.txt | sort | uniq -c
+  809  sort --help
+  810  grep -o '^[AEIOUaeiou]' scarlet.txt | LC_COLLATE=C sort | uniq -c
+  811  ls
+  812  mv answeres.txt answers.txt 
+  813  ls
+  814  vim answers.txt 
+  815  vi answers.txt 
+  816  history > cmds
