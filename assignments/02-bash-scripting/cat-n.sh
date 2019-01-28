@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
 
-INPUT_FILE=$1
-
 set -u
+
+INPUT_FILE=$1
 
 if [[ $# -eq 0 ]]; then
     echo "Usage: cat-n.sh FILE"
 	exit 1
 fi
 
-if [[ ! -f "$1" ]]; then
-    echo "$1 is NOT a file"
+if [[ ! -f "$INPUT_FILE" ]]; then
+    echo "$INPUT_FILE is NOT a file"
 	exit 2
 fi
 
