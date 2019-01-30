@@ -5,8 +5,8 @@ set -u
 REGEX=${1:-*}
 DIR=$PWD/../../data/gapminder
 FILES_LIST=$(mktemp)
-find "$DIR" -type f -iregex ".*/$REGEX[^/]*$" | sort > "$FILES_LIST"
 
+find "$DIR" -type f -iregex ".*/$REGEX[^/]*$" | sort > "$FILES_LIST"
 
 NUM_LINES=$(wc -l "$FILES_LIST" | awk '{print $1}')
 
