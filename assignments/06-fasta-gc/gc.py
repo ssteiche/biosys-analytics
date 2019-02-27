@@ -73,7 +73,6 @@ def main():
             warn('"{}" is not a file'.format(fas))
         else: 
 
-            #print(fas)
             basename = os.path.basename(fas)
             out_file_high = os.path.join(out_arg, os.path.splitext(basename)[0]+'_high'+os.path.splitext(basename)[1])
             out_fh_high = open(out_file_high, 'wt')
@@ -85,18 +84,13 @@ def main():
                 seq_len = len(record.seq)
                 nucs = Counter(record.seq)
                 gc = nucs.get('G', 0) + nucs.get('C', 0)
-                #print(record.seq)
                 gc_num = int(gc/seq_len*100)
-                #print(gc_num)
                 if gc_num >= pcgc_arg:
                     SeqIO.write(record, out_fh_high, 'fasta') 
                 else:
                     SeqIO.write(record, out_fh_low, 'fasta')
 
     print('Done, wrote {} sequences to out dir "{}"'.format(num_written, out_arg))
-#    print('fasta_arg = "{}"'.format(','.join(fasta_arg)))
-#    print('out_arg = "{}"'.format(out_arg))
-#    print('pcgc_arg = "{}"'.format(pcgc_arg))
 
 # --------------------------------------------------
 if __name__ == '__main__':
