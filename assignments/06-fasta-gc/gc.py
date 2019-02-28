@@ -71,24 +71,24 @@ def main():
     for fas in fasta_arg:
         if not os.path.isfile(fas):
             warn('"{}" is not a file'.format(fas))
-        else: 
+            continue
 
-            basename = os.path.basename(fas)
-            out_file_high = os.path.join(out_arg, os.path.splitext(basename)[0]+'_high'+os.path.splitext(basename)[1])
-            out_fh_high = open(out_file_high, 'wt')
-            out_file_low = os.path.join(out_arg, os.path.splitext(basename)[0]+'_low'+os.path.splitext(basename)[1])
-            out_fh_low = open(out_file_low, 'wt')
+        basename = os.path.basename(fas)
+        out_file_high = os.path.join(out_arg, os.path.splitext(basename)[0]+'_high'+os.path.splitext(basename)[1])
+        out_fh_high = open(out_file_high, 'wt')
+        out_file_low = os.path.join(out_arg, os.path.splitext(basename)[0]+'_low'+os.path.splitext(basename)[1])
+        out_fh_low = open(out_file_low, 'wt')
 
-            for record in SeqIO.parse(fas, 'fasta'):
-                num_written += 1
-                seq_len = len(record.seq)
-                nucs = Counter(record.seq)
-                gc = nucs.get('G', 0) + nucs.get('C', 0)
-                gc_num = int(gc/seq_len*100)
-                if gc_num >= pcgc_arg:
-                    SeqIO.write(record, out_fh_high, 'fasta') 
-                else:
-                    SeqIO.write(record, out_fh_low, 'fasta')
+        for record in SeqIO.parse(fas, 'fasta'):
+            num_written += 1
+            seq_len = len(record.seq)
+            nucs = Counter(record.seq)
+            gc = nucs.get('G', 0) + nucs.get('C', 0)
+            gc_num = int(gc/seq_len*100)
+            if gc_num >= pcgc_arg:
+                SeqIO.write(record, out_fh_high, 'fasta') 
+            else:
+                SeqIO.write(record, out_fh_low, 'fasta')
 
     print('Done, wrote {} sequences to out dir "{}"'.format(num_written, out_arg))
 
