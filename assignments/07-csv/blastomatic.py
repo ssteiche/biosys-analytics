@@ -23,7 +23,7 @@ def get_args():
 
     parser.add_argument(
         '-a',
-        '--annot',
+        '--annotations',
         help='Annotation file',
         metavar='FILE',
         type=str,
@@ -34,8 +34,7 @@ def get_args():
         '--outfile',
         help='Output file',
         metavar='FILE',
-        type=str,
-        default='')
+        type=str)
 
     return parser.parse_args()
 
@@ -57,7 +56,7 @@ def main():
     """Make a jazz noise here"""
     args = get_args()
     outfile = args.outfile
-    annot = args.annot
+    annot = args.annotations
     blast = args.BLAST
 
     if not os.path.isfile(blast):
@@ -90,15 +89,22 @@ def main():
         for row in reader:
             blast_results[row['1']] = row['2']
 
-    for seqid in blast_results:
-        if not seqid in genus.keys():
-            warn('Cannot find seq "{}" in lookup'.format(seqid))
-        else:
-            print('{}\t{}\t{}\t{}'.format(seqid, blast_results.get(seqid), genus.get(seqid), species.get(seqid)))
-
-    #print('outfile = "{}"'.format(outfile))
-    #print('annot = "{}"'.format(annot))
-    #print('blast = "{}"'.format(blast))
+    if not outfile:
+        print('{}\t{}\t{}\t{}'.format('seq_id', 'pident', 'genus', 'species'))
+        for seqid in blast_results:
+            if not seqid in genus.keys():
+                warn('Cannot find seq "{}" in lookup'.format(seqid))
+            else:
+                print('{}\t{}\t{}\t{}'.format(seqid, blast_results.get(seqid), genus.get(seqid), species.get(seqid)))
+    else:
+        with open('{}'.format(outfile), 'w') as tsvfile:
+            writer = csv.writer(tsvfile, delimiter='\t')
+            writer.writerow(['seq_id', 'pident', 'genus', 'species'])
+            for seqid in blast_results:
+                if not seqid in genus.keys():
+                    warn('Cannot find seq "{}" in lookup'.format(seqid))
+                else:
+                    writer.writerow([seqid, blast_results.get(seqid), genus.get(seqid), species.get(seqid)])    
 
 # --------------------------------------------------
 if __name__ == '__main__':
