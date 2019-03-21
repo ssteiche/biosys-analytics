@@ -27,7 +27,8 @@ def get_args():
         help='Take on keyword',
         metavar='STR',
         type=str,
-        default=None)
+        default=None,
+        required=True)
 
     parser.add_argument(
         '-o',
@@ -67,27 +68,39 @@ def main():
     """Make a jazz noise here"""
     args = get_args()
     uniprot = args.uniprot
-    key = args.keyword
+    key = args.keyword.lower()
     output = args.output
-    skip = args.skip
+    skip = set(map(str.lower, args.skip))
 
-    if key == None:
-        die('error: the following arguments are required: -k/--keyword')
-    
     if not os.path.isfile(uniprot):
         die('"{}" is not a file'.format(uniprot))
 
-    key_set = set(key)
     skip_set = set(skip)
 
-    tree = ElementTree()
-    root = tree.parse(file)
+    print('Processing "{}"'.format(uniprot))
 
-    print('str_arg = "{}"'.format(str_arg))
-    print('int_arg = "{}"'.format(int_arg))
-    print('flag_arg = "{}"'.format(flag_arg))
-    print('positional = "{}"'.format(pos_arg))
+    num_skipped = 0
+    num_taken = 0
 
+    with open(output, 'w') as out_fh:
+        for record in SeqIO.parse(uniprot, 'swiss'):
+            annot = record.annotations
+            if skip and 'taxonomy' in annot:
+                taxa = set(map(str.lower, annot['taxonomy']))
+                if skip.intersection(taxa):
+                    num_skipped += 1
+                    continue
+
+            if 'keywords' in annot:
+                kw = set(map(str.lower, annot['keywords']))
+
+                if key in kw:
+                    num_taken += 1
+                    SeqIO.write(record, out_fh, 'fasta')
+                else:
+                    num_skipped += 1
+
+    print('Done, skipped {} and took {}. See output in "{}".'.format(num_skipped, num_taken, output))
 
 # --------------------------------------------------
 if __name__ == '__main__':
