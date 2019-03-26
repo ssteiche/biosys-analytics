@@ -66,14 +66,16 @@ def main():
             break
         p1 = deck.pop()
         p2 = deck.pop()
+        p1card = p1[0]+p1[1]
+        p2card = p2[0]+p2[1]
         if lookup[p1[1]] > lookup[p2[1]]:
             p1_wins += 1
-            print('{}{}  {}{} P1'.format(p1[0],p1[1],p2[0],p2[1]))
+            print('{:>3} {:>3} P1'.format(p1card, p2card))
         elif lookup[p1[1]] < lookup[p2[1]]:
             p2_wins += 1
-            print('{}{}  {}{} P2'.format(p1[0],p1[1],p2[0],p2[1]))
+            print('{:>3} {:>3} P2'.format(p1card, p2card))
         else:
-            print('{}{}  {}{} WAR!'.format(p1[0],p1[1],p2[0],p2[1]))
+            print('{:>3} {:>3} WAR!'.format(p1card, p2card))
 
     if p1_wins > p2_wins:
         print('P1 {} P2 {}: Player 1 wins'.format(p1_wins, p2_wins))
