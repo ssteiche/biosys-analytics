@@ -74,21 +74,31 @@ def main():
     if phit == True:
         pc3 = deck.pop()
         pval = lookup[pc1[1]]+lookup[pc2[1]]+lookup[pc3[1]]
-        print('P [{:2}]: {}{} {}{} {}{}'.format(pval,pc1[0],pc1[1],pc2[0],pc2[1],pc3[0],pc3[1]))
+        #print('P [{:2}]: {}{} {}{} {}{}'.format(pval,pc1[0],pc1[1],pc2[0],pc2[1],pc3[0],pc3[1]))
     else:
         pval = lookup[pc1[1]]+lookup[pc2[1]]
-        print('P [{:2}]: {}{} {}{}'.format(pval,pc1[0],pc1[1],pc2[0],pc2[1]))
+        #print('P [{:2}]: {}{} {}{}'.format(pval,pc1[0],pc1[1],pc2[0],pc2[1]))
     
     if dhit == True:
         dc3 = deck.pop()
         dval = lookup[dc1[1]]+lookup[dc2[1]]+lookup[dc3[1]]
-        print('D [{:2}]: {}{} {}{} {}{}'.format(dval,dc1[0],dc1[1],dc2[0],dc2[1],dc3[0],dc3[1]))
+        #print('D [{:2}]: {}{} {}{} {}{}'.format(dval,dc1[0],dc1[1],dc2[0],dc2[1],dc3[0],dc3[1]))
     else:
         dval = lookup[dc1[1]]+lookup[dc2[1]]
-        print('D [{:2}]: {}{} {}{}'.format(dval,dc1[0],dc1[1],dc2[0],dc2[1]))
+        #print('D [{:2}]: {}{} {}{}'.format(dval,dc1[0],dc1[1],dc2[0],dc2[1]))
      
+    if dhit == True:
+        print('D [{:2}]: {}{} {}{} {}{}'.format(dval,dc1[0],dc1[1],dc2[0],dc2[1],dc3[0],dc3[1]))
+    else:
+        print('D [{:2}]: {}{} {}{}'.format(dval,dc1[0],dc1[1],dc2[0],dc2[1]))
+    
+    if phit == True:
+        print('P [{:2}]: {}{} {}{} {}{}'.format(pval,pc1[0],pc1[1],pc2[0],pc2[1],pc3[0],pc3[1]))
+    else:
+        print('P [{:2}]: {}{} {}{}'.format(pval,pc1[0],pc1[1],pc2[0],pc2[1]))
+    
     if dval > 21:
-        print('Dealer busts')
+        print('Dealer busts.')
         sys.exit(0)
     if pval > 21:
         print('Player busts! You lose, loser!')
@@ -97,12 +107,12 @@ def main():
         print('Dealer wins!')
         sys.exit(0)
     if pval == 21:
-        print('Player wins. You probably cheated')
+        print('Player wins. You probably cheated.')
         sys.exit(0)    
     if dval < 18:
-        print('Dealer should hit')
+        print('Dealer should hit.')
     if pval < 18:
-        print('Player should hit')
+        print('Player should hit.')
 
 # --------------------------------------------------
 if __name__ == '__main__':
