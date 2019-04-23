@@ -1,0 +1,10 @@
+when making a regex character class, [^] the hat indicates that the characters following it are excluded. ie [^a-z] matches NOT a-z.
+	Use re.sub().lower() to remove punctuation and enforce lower case.
+defaultdict(int) 
+	If we assign something as the dict as such:
+	d1 = defaultdict(int)
+	d1['Ken] += 1   will add 1 to whatever was at 'Ken', which is 0 to start.
+
+MIGHT use Counter()
+	Counter() returns a dictionary with count values of the number of times each input key item occurs.
+

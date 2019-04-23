@@ -1,0 +1,5 @@
+-Use regex (import re) to capture all of the protein ids in the CD-hit file
+-Make a 'set' of all of the captured id's
+   -this will be more useful than a dictionary
+-then go through protein list to see if it exists in captured set
+   -if it is, then skip it, because we are really interested in UNclustered proteins

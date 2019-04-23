@@ -1,0 +1,5 @@
+Start by comparing two text files word by word
+	compare each word letter by letter
+The difference in len() between the words is the beggining of the hamming distance (because any extra letters will be a difference)
+	Use `list(zip(word1, word2))` of the two words
+sum(map(dist, words)) 
