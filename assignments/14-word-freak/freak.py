@@ -57,7 +57,7 @@ def freqs(infiles):
     counts = defaultdict(int)
     for infile in infiles:
         for line in infile:
-            for word in line.rstrip().split():
+            for word in line.split():
                 if re.sub('[^a-zA-Z0-9]', '', word).lower() == '':
                     continue
                 counts[re.sub('[^a-zA-Z0-9]', '', word).lower()] += 1
