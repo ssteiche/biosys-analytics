@@ -129,12 +129,13 @@ def common(words1, words2, distance):
     comps = product(words1, words2)
     outs = []
     for s1, s2 in comps:
-        edits = abs(len(s1)-len(s2))
-        for l1, l2 in list(zip(s1, s2)):
-            if l1 != l2:
-                edits += 1
-        if edits <= distance:
-            outs.append((s1, s2, edits))
+        if dist(s1, s2) <= distance:
+        #edits = abs(len(s1)-len(s2))
+        #for l1, l2 in list(zip(s1, s2)):
+        #    if l1 != l2:
+        #        edits += 1
+        #if edits <= distance:
+            outs.append((s1, s2, dist(s1, s2)))
 
     return sorted(outs)
 
